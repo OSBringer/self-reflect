@@ -1,53 +1,38 @@
 {
-  "name": "self-reflect",
-  "version": "1.0.0",
-  "description": "Application for generating question for everyday.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Boris Hlavienka",
-  "license": "ISC",
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    "eslint": "^8.36.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "express": "^4.18.2",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.6.0",
-    "nodemon": "^2.0.22"
-  },
-  "eslintConfig": {
-    "extends": "airbnb-base",
-    "env": {
-      "es6": true,
-      "browser": true
+    "name": "self-reflect",
+    "version": "1.0.0",
+    "description": "Application for generating question for everyday.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon ./server/app.ts",
+        "lint": "eslint . --ext .ts"
     },
-    "rules": {
-      "brace-style": [
-        "error",
-        "stroustrup"
-      ],
-      "linebreak-style": [
-        "error",
-        "windows"
-      ],
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "no-unused-vars": [
-        "warn"
-      ],
-      "no-var": [
-        "warn"
-      ],
-      "one-var": [
-        "off"
-      ]
+    "author": "Boris Hlavienka",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.17",
+        "@typescript-eslint/eslint-plugin": "^5.56.0",
+        "@typescript-eslint/parser": "^5.56.0",
+        "cors": "^2.8.5",
+        "eslint": "^8.36.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.27.5",
+        "express": "^4.18.2",
+        "express-graphql": "^0.12.0",
+        "graphql": "^16.6.0",
+        "mysql2": "^3.2.0",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.7",
+        "typeorm": "^0.3.12",
+        "typescript": "^5.0.2"
+    },
+    "dependencies": {
+        "@types/cors": "^2.8.13",
+        "@types/node": "^18.15.9",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-react": "^7.32.2",
+        "ts-node": "^10.9.1"
     }
-  }
 }
