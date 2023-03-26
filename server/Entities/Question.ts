@@ -3,20 +3,22 @@ import {
     Entity,
     Column,
     PrimaryGeneratedColumn,
-    OneToMany,
+    OneToOne,
+    JoinColumn,
 } from "typeorm";
+
 import Answers from "./Answer";
 
 @Entity()
-class Users extends BaseEntity {
+class Questions extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: string;
 
     @Column()
-    name!: string;
+    date!: string;
 
     @Column()
-    username!: string;
+    category!: string;
 
     @Column()
     email!: string;
@@ -24,14 +26,9 @@ class Users extends BaseEntity {
     @Column()
     password!: string;
 
-    @Column()
-    birthdate!: string;
-
-    @Column()
-    country!: string;
-
-    @OneToMany((type) => Answers, (answer) => answer.id)
-    answers!: Answers[];
+    @OneToOne((type) => Answers)
+    @JoinColumn()
+    answers?: Answers;
 }
 
-export default Users;
+export default Questions;

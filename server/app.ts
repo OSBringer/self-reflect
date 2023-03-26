@@ -5,7 +5,10 @@ import { buildSchema } from "graphql";
 import cors from "cors";
 import { DataSource } from "typeorm";
 import { schema } from "./Schema";
-import { Users } from "./Entities/User";
+import Users from "./Entities/User";
+import Answers from "./Entities/Answer";
+import Questions from "./Entities/Question";
+import Categories from "./Entities/Category";
 
 const main = async () => {
     const AppDataSource = new DataSource({
@@ -15,7 +18,7 @@ const main = async () => {
         password: "wowko231",
         logging: true,
         synchronize: false,
-        entities: [Users],
+        entities: [Users, Answers, Questions, Categories],
         host: "localhost",
         port: 3306,
     });
