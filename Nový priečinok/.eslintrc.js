@@ -3,6 +3,7 @@ module.exports = {
         browser: true,
         es2021: true,
     },
+
     parser: "@typescript-eslint/parser",
     extends: [
         "airbnb-base",
@@ -18,6 +19,8 @@ module.exports = {
     },
     plugins: ["react", "@typescript-eslint"],
     rules: {
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
     },
 };
