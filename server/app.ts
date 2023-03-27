@@ -17,7 +17,7 @@ const main = async () => {
         username: "root",
         password: "wowko231",
         logging: true,
-        synchronize: false,
+        synchronize: true,
         entities: [Users, Answers, Questions, Categories],
         host: "localhost",
         port: 3306,

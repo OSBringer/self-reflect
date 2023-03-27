@@ -5,7 +5,8 @@ import {
     PrimaryGeneratedColumn,
     OneToOne,
     JoinColumn,
-    OneToMany,
+    JoinTable,
+    ManyToMany,
     ManyToOne,
 } from "typeorm";
 import Categories from "./Category";
@@ -20,13 +21,8 @@ class Answers extends BaseEntity {
     @Column()
     date!: string;
 
-    @Column()
-    email!: string;
-
-    @Column()
-    password!: string;
-
-    @OneToMany((type) => Categories, (category) => category.id)
+    @ManyToMany((type) => Categories, (category) => category.id)
+    @JoinTable()
     categories!: Categories[];
 
     @ManyToOne((type) => Users, (user) => user.id)

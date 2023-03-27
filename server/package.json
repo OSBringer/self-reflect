@@ -2,10 +2,10 @@
     "name": "self-reflect",
     "version": "1.0.0",
     "description": "Application for generating question for everyday.",
-    "main": "index.js",
+    "main": "app.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon ./server/app.ts",
+        "start": "nodemon ./app.ts",
         "lint": "eslint . --ext .ts"
     },
     "author": "Boris Hlavienka",

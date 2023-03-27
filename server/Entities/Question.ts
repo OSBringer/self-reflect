@@ -5,9 +5,12 @@ import {
     PrimaryGeneratedColumn,
     OneToOne,
     JoinColumn,
+    JoinTable,
+    ManyToMany,
 } from "typeorm";
 
 import Answers from "./Answer";
+import Categories from "./Category";
 
 @Entity()
 class Questions extends BaseEntity {
@@ -17,14 +20,9 @@ class Questions extends BaseEntity {
     @Column()
     date!: string;
 
-    @Column()
-    category!: string;
-
-    @Column()
-    email!: string;
-
-    @Column()
-    password!: string;
+    @ManyToMany((type) => Categories, (category) => category.id)
+    @JoinTable()
+    categories!: Categories[];
 
     @OneToOne((type) => Answers)
     @JoinColumn()
