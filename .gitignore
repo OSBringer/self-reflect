@@ -9,6 +9,10 @@
 # testing
 /coverage
 
+# next.js
+/client/.next
+/client/out
+
 # production
 /build
 
@@ -26,3 +30,8 @@ yarn-error.log*
 Gyme-eCommerce/
 
 public copy/
+
+# typescript
+/client/*.tsbuildinfo
+/client/next-env.d.ts
+
